@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Я аниме девочка</title>
+</head>
+<body>
+<script src="https://rawcdn.githack.com/ArtMan-8/outline-prototype/e73da2a1ee9031564b56ed5d98541891f7123933/js/outline-control.js">
+</script>
+<header>
+    <div class="left-side-header">
+        <a href="#" class="logo-header">
+            <img src="/public/icon.jpeg" alt="logo" width="5%">
+        </a>
+        <label title="search-input">
+            <input type="text" placeholder="Search...">
+        </label>
+        <nav>
+            <a href="#">All gists</a>
+            <a href="#">Back to ...</a>
+        </nav>
+    </div>
+    <div class="right-side-header">
+        <details class="user-options">
+            <summary>
+                <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4" width="3%">
+            </summary>
+            <ul>
+                <li><a href="#">Your profile</a></li>
+                <li><a href="#">Your gists</a></li>
+                <li><a href="#">Starred gists</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Sign out</a></li>
+            </ul>
+        </details>
+    </div>
+</header>
+<main>
+    <div class="gist-profile">
+        <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4" width="3%">
+        <p>{{ username }}</p>
+    </div>
+    <div class="gist-profile-editable-content">
+        <div class="gist-profile-about">
+            {{ about me }}
+        </div>
+        <div class="gist-profile-follows">
+            <a href="#">{{ followers.count }} followers</a>
+            <a href="#">{{ following.count }} following</a>
+        </div>
+        <ul class="gist-profile-organizations">
+            <li>{{ user.organization }}</li>
+            <li>{{ user.location }}</li>
+        </ul>
+        <div class="gist-profile-contacts">
+            <a href="#">{{ user.social_network }}</a>
+        </div>
+    </div>
+    <div class="gist-posts">
+        <div class="gist-snippet">
+            <ul class="gist-snippet-meta">
+                <li>
+                    <a href="#" class="gist-my-posts">
+                        your posts
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="gist-my-forked-posts">
+                        forked posts
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="gist-my-starred-posts">
+                        starred posts
+                    </a>
+                </li>
+            </ul>
+            <details class="gist-filter-gists">
+                <summary>
+                    <span>Filter gists</span>
+                </summary>
+                <div class="gist-filter-options">
+                    <a href="#">All gists</a>
+                    <a href="#">Public gists</a>
+                    <a href="#">Secret gists</a>
+                    <a href="#">Starred gists</a>
+                </div>
+            </details>
+        </div>
+        <div class="gist-post">
+            <div class="gist-post-meta">
+                <div class="gist-post-changes-info">
+                <span class="gist-post-path">
+                    <a href="#" class="gist-post-author">{{ user.name }}</a>
+                    /
+                    <a href="#" class="gist-post-name">{{ post.name }}</a>
+                </span>
+                    <span class="gist-post-description">
+                    {{ post.description }}
+                </span>
+                    <ul class="gist-post-info">
+                        <li>{{ stars.number }} stars</li>
+                        <li>{{ forks.number }} forks</li>
+                        <li>{{ comments.number }} comments</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gist-post-content-code">
+                    <pre>
+                        <code>
+                            {{ post.code }}
+                        </code>
+                    </pre>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="left-side-footer">
+        <a href="#" class="logo-footer">
+            <img src="/public/icon.jpeg" alt="logo" width="5%">
+        </a>
+        <span>2022 Anime Gist, Inc.</span>
+    </div>
+</footer>
+</body>

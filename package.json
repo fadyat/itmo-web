@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-nunjucks-render": "^2.2.3"
-  },
-  "scripts": {
-    "build": "gulp build"
-  }
-}
