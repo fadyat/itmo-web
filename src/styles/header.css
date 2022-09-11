@@ -1,0 +1,117 @@
+header {
+    background-color: #161b22;
+    display: flex;
+    width: 100%;
+}
+
+.gist-right-side-header {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
+}
+
+.gist-left-side-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.gist-left-side-header label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gist-left-side-header input {
+    margin: 0.5rem 1rem;
+    padding: 0.15rem 0.15rem 0.15rem 0.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    border: #e6e6e6 2px solid;
+    border-radius: 0.2rem;
+    text-align: left;
+    box-shadow: none;
+    box-sizing: border-box;
+    width: 15rem;
+}
+
+.gist-left-side-header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem 1rem;
+    padding: 0.1rem 0.15rem 0.15rem 0.3rem;
+}
+
+.gist-nav-item {
+    text-decoration: none;
+    margin: 0.5rem 1rem;
+    padding: 0.45rem 1rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 0.9rem;
+    width: 8rem;
+}
+
+.gist-user-details {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+    margin: 0.5rem 1rem;
+    width: 6.5rem;
+}
+
+.gist-user-details summary {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+header .gist-user-avatar {
+    margin: 0.4rem;
+    width: 2rem;
+    border-radius: 1rem;
+}
+
+.gist-user-options {
+    position: absolute;
+    text-align: center;
+    width: 6.4rem;
+    border: 0.1rem solid #e6e6e6;
+    border-radius: 0.5rem;
+    background-color: #161b22;
+}
+
+.gist-user-options li {
+    list-style: none;
+    padding: 0.5rem 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    background-color: #161b22;
+    border-radius: 1rem;
+}
+.gist-user-options li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.gist-left-side-header a {
+    display: flex;
+    align-items: center;
+    margin: 0.3rem;
+}
+
+.gist-logo-header {
+    width: 3rem;
+    margin: 0.2rem;
+    border-radius: 20rem;
+}
+

@@ -1,0 +1,53 @@
+* {
+    outline: 1px solid red;
+    margin: 0;
+    padding: 0;
+    /*overflow-x: hidden;*/
+}
+
+
+main {
+    margin: 0;
+    /*padding: 0;*/
+    /*display: none;*/
+    background-color: #0d1117;
+    color: white;
+    /*margin: 0 6rem;*/
+    padding-left: 4rem;
+}
+section {
+    margin: 0;
+    padding: 0;
+    /*display: none;*/
+}
+
+.gist-profile {
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+main .gist-user-avatar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .gist-user-avatar img {
+    padding: 1rem;
+}
+
+.gist-profile-follows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.gist-profile-follows a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+

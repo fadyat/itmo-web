@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Я аниме девочка</title>
+    <link rel="stylesheet" href="/src/styles/footer.css">
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
-<script src="https://rawcdn.githack.com/ArtMan-8/outline-prototype/e73da2a1ee9031564b56ed5d98541891f7123933/js/outline-control.js">
-</script>
 <header>
-    <div class="left-side-header">
-        <a href="#" class="logo-header">
-            <img src="/public/icon.jpeg" alt="logo" width="5%">
+    <div class="gist-left-side-header">
+        <a href="#">
+            <img src="/public/icon.jpeg" alt="logo" class="gist-logo-header">
         </a>
         <label title="search-input">
             <input type="text" placeholder="Search...">
         </label>
         <nav>
-            <a href="#">All gists</a>
-            <a href="#">Back to ...</a>
+            <a href="#" class="gist-nav-item">All gists</a>
+            <a href="#" class="gist-nav-item">Back to dora</a>
         </nav>
     </div>
-    <div class="right-side-header">
-        <details class="user-options">
+    <div class="gist-right-side-header">
+        <details class="gist-user-details">
             <summary>
-                <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4" width="3%">
+                <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4" class="gist-user-avatar">
             </summary>
-            <ul>
+            <ul class="gist-user-options">
                 <li><a href="#">Your profile</a></li>
                 <li><a href="#">Your gists</a></li>
                 <li><a href="#">Starred gists</a></li>
@@ -37,27 +38,29 @@
     </div>
 </header>
 <main>
-    <div class="gist-profile">
-        <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4" width="3%">
-        <p>{{ username }}</p>
-    </div>
-    <div class="gist-profile-editable-content">
-        <div class="gist-profile-about">
-            {{ about me }}
+    <section class="gist-profile">
+        <div class="gist-user-avatar">
+            <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4">
+            <p>{{ username }}</p>
         </div>
-        <div class="gist-profile-follows">
-            <a href="#">{{ followers.count }} followers</a>
-            <a href="#">{{ following.count }} following</a>
+        <div class="gist-profile-editable-content">
+            <div class="gist-profile-about">
+                {{ about me }}
+            </div>
+            <div class="gist-profile-follows">
+                <a href="#">14 followers</a>
+                <a href="#">1 following</a>
+            </div>
+            <ul class="gist-profile-organizations">
+                <li>{{ user.organization }}</li>
+                <li>{{ user.location }}</li>
+            </ul>
+            <div class="gist-profile-contacts">
+                <a href="#">{{ user.social_network }}</a>
+            </div>
         </div>
-        <ul class="gist-profile-organizations">
-            <li>{{ user.organization }}</li>
-            <li>{{ user.location }}</li>
-        </ul>
-        <div class="gist-profile-contacts">
-            <a href="#">{{ user.social_network }}</a>
-        </div>
-    </div>
-    <div class="gist-posts">
+    </section>
+    <section class="gist-posts">
         <div class="gist-snippet">
             <ul class="gist-snippet-meta">
                 <li>
@@ -107,21 +110,21 @@
                 </div>
             </div>
             <div class="gist-post-content-code">
-                    <pre>
-                        <code>
-                            {{ post.code }}
-                        </code>
-                    </pre>
+                <pre>
+                    <code>{{ post.code }}</code>
+                </pre>
             </div>
         </div>
-    </div>
+    </section>
 </main>
 <footer>
-    <div class="left-side-footer">
-        <a href="#" class="logo-footer">
-            <img src="/public/icon.jpeg" alt="logo" width="5%">
+    <div class="gist-left-side-footer">
+        <a href="#">
+            <img src="/public/icon.jpeg" alt="logo" class="gist-logo-footer">
         </a>
-        <span>2022 Anime Gist, Inc.</span>
+        <span class="gist-corp-footer">
+            2022 Anime Gist, Inc.
+        </span>
     </div>
 </footer>
 </body>
