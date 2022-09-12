@@ -41,22 +41,25 @@
     <section class="gist-profile">
         <div class="gist-user-avatar">
             <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4">
-            <p>{{ username }}</p>
+        </div>
+        <div class="gist-user-names">
+            <h1>Artyom Fadeyev</h1>
+            <h3>fadyat</h3>
         </div>
         <div class="gist-profile-editable-content">
             <div class="gist-profile-about">
-                {{ about me }}
+                Я аниме девочка
             </div>
             <div class="gist-profile-follows">
                 <a href="#">14 followers</a>
                 <a href="#">1 following</a>
             </div>
             <ul class="gist-profile-organizations">
-                <li>{{ user.organization }}</li>
-                <li>{{ user.location }}</li>
+                <li>GitHub, Copilot-developer</li>
+                <li>Near you</li>
             </ul>
             <div class="gist-profile-contacts">
-                <a href="#">{{ user.social_network }}</a>
+                <a href="#">мемы в тэгэ</a>
             </div>
         </div>
     </section>
@@ -64,18 +67,18 @@
         <div class="gist-snippet">
             <ul class="gist-snippet-meta">
                 <li>
-                    <a href="#" class="gist-my-posts">
-                        your posts
+                    <a href="#">
+                        My posts
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="gist-my-forked-posts">
-                        forked posts
+                    <a href="#">
+                        Forked posts
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="gist-my-starred-posts">
-                        starred posts
+                    <a href="#">
+                        Starred posts
                     </a>
                 </li>
             </ul>
@@ -94,25 +97,50 @@
         <div class="gist-post">
             <div class="gist-post-meta">
                 <div class="gist-post-changes-info">
-                <span class="gist-post-path">
-                    <a href="#" class="gist-post-author">{{ user.name }}</a>
-                    /
-                    <a href="#" class="gist-post-name">{{ post.name }}</a>
-                </span>
+                    <span class="gist-post-path">
+                        <a href="#" class="gist-post-author">fadyat</a>
+                                                /
+                        <a href="#" class="gist-post-name">bebra.py</a>
+                    </span>
+                    <span class="gist-post-changes">
+                        Last active 1 day ago
+                    </span>
                     <span class="gist-post-description">
-                    {{ post.description }}
-                </span>
-                    <ul class="gist-post-info">
-                        <li>{{ stars.number }} stars</li>
-                        <li>{{ forks.number }} forks</li>
-                        <li>{{ comments.number }} comments</li>
-                    </ul>
+                        Smell some bebra code
+                    </span>
                 </div>
+                <ul class="gist-post-info">
+                    <li>0 stars</li>
+                    <li>0 forks</li>
+                    <li>0 comments</li>
+                </ul>
             </div>
             <div class="gist-post-content-code">
-                <pre>
-                    <code>{{ post.code }}</code>
-                </pre>
+                <table class="gist-code-table">
+                    <tbody>
+                    <tr class="gist-code-single-line">
+                        <td class="gist-code-line-number">1</td>
+                        <td class="gist-code-line-content">import gigachad</td>
+                    </tr>
+                    <tr class="gist-code-single-line">
+                        <td class="gist-code-line-number">2</td>
+                        <td class="gist-code-line-content"></td>
+                    </tr>
+                    <tr class="gist-code-single-line">
+                        <td class="gist-code-line-number">3</td>
+                        <td class="gist-code-line-content"></td>
+                    </tr>
+                    <tr class="gist-code-single-line">
+                        <td class="gist-code-line-number">4</td>
+                        <td class="gist-code-line-content">if __name__ == '__main__':</td>
+                    </tr>
+                    <tr class="gist-code-single-line">
+                        <td class="gist-code-line-number">5</td>
+                        <td class="gist-code-line-content tab">print(f"Hello, world from {gigachad.giga}")
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>

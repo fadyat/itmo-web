@@ -56,6 +56,9 @@ header {
     color: white;
     font-size: 0.9rem;
     width: 8rem;
+    border-radius: 0.5rem;
+    background-color: #161b22;
+    border: 0.1rem solid #e6e6e6;
 }
 
 .gist-user-details {
