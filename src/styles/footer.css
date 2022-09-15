@@ -1,35 +1,4 @@
-footer {
-    background-color: #161b22;
+.left-side-footer {
     align-items: center;
     display: flex;
-    width: 100%;
 }
-
-.gist-left-side-footer {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-}
-
-.gist-left-side-footer a {
-    display: flex;
-    align-items: center;
-    margin: 0.3rem;
-}
-
-.gist-logo-footer {
-    width: 3rem;
-    /*align-items: center;*/
-    margin: 0.2rem;
-    border-radius: 20rem;
-}
-
-.gist-corp-footer {
-    margin: 0.5rem 1rem;
-    padding: 0.4rem 3rem;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-}
-

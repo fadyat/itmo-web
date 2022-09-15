@@ -1,0 +1,87 @@
+.user-profile {
+    width: 20rem;
+    padding: 3rem 0;
+    margin-right: 3rem;
+}
+
+.user-avatar-body {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-editable-content {
+    padding: 1rem 0.5rem;
+}
+
+.user-actual-name {
+    font-size: 1.1rem;
+}
+
+.user-name {
+    margin-top: -0.4rem;
+    color: var(--grey-color);
+    font-weight: unset;
+    font-size: 0.95rem;
+}
+
+.user-about {
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+    color: var(--base-text-color);
+}
+
+.user-follows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.2rem 0;
+}
+
+.follows-redirect {
+    display: flex;
+    justify-content: center;
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+    color: #c9d1d9;
+    margin: 0.3rem 0;
+}
+
+.follows-number {
+    color: var(--base-text-color);
+    margin-right: 0.2rem;
+}
+
+.user-work-status {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.user-organization-name, .user-location {
+    font-size: var(--normal-font-size);
+    color: var(--base-text-color);
+}
+
+.user-organization-name {
+    margin-top: 0.2rem;
+}
+
+.user-location {
+    margin: 0.2rem 0;
+}
+
+.user-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.with-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.05rem 0;
+}

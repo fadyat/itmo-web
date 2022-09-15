@@ -1,0 +1,23 @@
+.organization-logo-small {
+    width: 3rem;
+    border-radius: 20rem;
+}
+
+.organization-logo-redirect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.3rem 0.2rem;
+}
+
+.user-avatar {
+    border-radius: 10rem;
+    padding: 5%;
+    background-color: #161b22;
+    border: var(--alpha-border);
+}
+
+.in-profile-icon {
+    width: 1.2rem;
+    margin-right: 0.4rem;
+}
