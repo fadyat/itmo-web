@@ -1,0 +1,17 @@
+.base-button {
+    text-align: center;
+    border-radius: var(--base-button-border-radius);
+    border: var(--alpha-border);
+    width: 7rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--header-background-color);
+}
+
+.edit-profile-button {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: normal;
+}

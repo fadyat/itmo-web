@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Я аниме девочка</title>
+    <link rel="stylesheet" href="/src/styles/footer.css">
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="stylesheet" href="/src/styles/main/post.css">
+    <link rel="stylesheet" href="/src/styles/main/profile.css">
+    <link rel="stylesheet" href="/src/styles/constants.css">
+    <link rel="stylesheet" href="/src/styles/components/icon.css">
+    <link rel="stylesheet" href="/src/styles/components/text.css">
+    <link rel="stylesheet" href="/src/styles/components/button.css">
+    <link rel="stylesheet" href="/src/styles/normalize.css">
+</head>
+<body>
+<!--<script-->
+<!--        src="https://rawcdn.githack.com/ArtMan-8/outline-prototype/e73da2a1ee9031564b56ed5d98541891f7123933/js/outline-control.js"-->
+<!--&gt;-->
+<!--</script>-->
+<header>
+    <div class="left-side-header">
+        <a href="#" class="organization-logo-redirect">
+            <img src="/public/logo.jpeg" alt="logo" class="organization-logo-small user-avatar">
+        </a>
+        <label title="search-input" class="header-input-label">
+            <input type="text" placeholder="Search..." class="header-input">
+        </label>
+        <nav class="header-navigation">
+            <a href="#" class="navigation-item base-button">All gists</a>
+            <a href="#" class="navigation-item base-button">Back to dora</a>
+        </nav>
+    </div>
+    <div class="right-side-header">
+        <details class="user-details">
+            <summary class="user-details-summary">
+                <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4"
+                     class="user-avatar user-avatar-header"
+                >
+            </summary>
+            <ul class="base-button user-options">
+                <li class="user-option">
+                    <a href="#" class="user-option-redirect">Your profile</a>
+                </li>
+                <li class="user-option">
+                    <a href="#" class="user-option-redirect">Your gists</a>
+                </li>
+                <li class="user-option">
+                    <a href="#" class="user-option-redirect">Starred gists</a>
+                </li>
+                <li class="user-option">
+                    <a href="#" class="user-option-redirect">Help</a>
+                </li>
+                <li class="user-option">
+                    <a href="#" class="user-option-redirect">Settings</a>
+                </li>
+                <li class="user-option last-option">
+                    <a href="#" class="user-option-redirect">Sign out</a>
+                </li>
+            </ul>
+        </details>
+    </div>
+</header>
+
+<main>
+    <section class="user-profile">
+        <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4"
+             class="user-avatar-body user-avatar"
+        >
+        <div class="user-editable-content">
+            <h1 class="user-actual-name">Artyom Fadeyev</h1>
+            <h3 class="user-name">fadyat</h3>
+            <div class="user-about">
+                Я аниме девочка
+            </div>
+            <nav class="header-navigation">
+                <a href="#" class="navigation-item base-button edit-profile-button">Edit profile</a>
+            </nav>
+            <div class="user-follows">
+                <a href="#" class="follows-redirect">
+                    <span class="follows-number">14</span> followers
+                </a>
+                <a href="#" class="follows-redirect">
+                    <span class="follows-number">1</span> following
+                </a>
+            </div>
+            <ul class="user-work-status">
+                <li class="user-organization-name with-icon">
+                    <img src="/public/org.png" alt="location" class="in-profile-icon">
+                    GitHub, Copilot-developer
+                </li>
+                <li class="user-location with-icon">
+                    <img src="/public/location.png" alt="location" class="in-profile-icon">
+                    Near you
+                </li>
+            </ul>
+            <div class="user-contacts">
+                <div class="user-contact with-icon">
+                    <img src="/public/tg.svg" alt="tg-icon" class="in-profile-icon">
+                    <a href="#" class="user-option-redirect">мемы в тэгэ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="user-posts">
+        <div class="posts-snippet">
+            <nav class="snippet-meta">
+                <a href="#" class="snippet-option base-button navigation-item user-option-redirect">My posts</a>
+                <a href="#" class="snippet-option base-button navigation-item user-option-redirect">Forked posts</a>
+                <a href="#" class="snippet-option base-button navigation-item user-option-redirect">Starred posts</a>
+            </nav>
+            <details class="user-details gists-filters">
+                <summary class="user-details-summary">
+                    <span class="base-button user-option-redirect navigation-item">Filter gists</span>
+                </summary>
+                <ul class="base-button user-options gists-filters-list">
+                    <li class="user-option">
+                        <a href="#" class="user-option-redirect">All gists</a>
+                    </li>
+                    <li class="user-option">
+                        <a href="#" class="user-option-redirect">Public gists</a>
+                    </li>
+                    <li class="user-option">
+                        <a href="#" class="user-option-redirect">Secret gists</a>
+                    </li>
+                    <li class="user-option last-option">
+                        <a href="#" class="user-option-redirect">Starred gists</a>
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <div class="post">
+            <div class="post-meta">
+                <div class="post-changes-info">
+                    <span class="post-path">
+                        <a href="#" class="post-author">fadyat</a>
+                        /
+                        <a href="#" class="post-name">bebra.py</a>
+                    </span>
+                    <span class="post-last-change">Last active 1 day ago</span>
+                    <span class="post-description">Smell some bebra code</span>
+                </div>
+                <ul class="post-info">
+                    <li class="post-info-item">0 stars</li>
+                    <li class="post-info-item">0 forks</li>
+                    <li class="post-info-item">0 comments</li>
+                </ul>
+            </div>
+            <div class="post-content">
+                <table class="code-table">
+                    <tbody>
+                    <tr class="code-line">
+                        <td class="code-line-number">1</td>
+                        <td class="code-line-content">import random</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">2</td>
+                        <td class="code-line-content"></td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">3</td>
+                        <td class="code-line-content">import gigachad</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">4</td>
+                        <td class="code-line-content"></td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">5</td>
+                        <td class="code-line-content"></td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">6</td>
+                        <td class="code-line-content">def flexing(</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">7</td>
+                        <td class="code-line-content tab">gigachad: gigachad.Gigachad,</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">8</td>
+                        <td class="code-line-content">):</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">9</td>
+                        <td class="code-line-content tab">flex_value = random.randint(0, 100)</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">10</td>
+                        <td class="code-line-content tab">while flex_value:</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">11</td>
+                        <td class="code-line-content tab2">flex_value -= 1</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">12</td>
+                        <td class="code-line-content tab2">print(f'{gigachad.name} flexing so hard')</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">13</td>
+                        <td class="code-line-content"></td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">14</td>
+                        <td class="code-line-content"></td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">15</td>
+                        <td class="code-line-content">if __name__ == '__main__':</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">16</td>
+                        <td class="code-line-content tab">gigachad_instance = gigachad.Gigachad()</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">17</td>
+                        <td class="code-line-content tab">flexing(gigachad_instance)</td>
+                    </tr>
+                    <tr class="code-line">
+                        <td class="code-line-number">18</td>
+                        <td class="code-line-content"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="left-side-footer">
+        <a href="#" class="organization-logo-redirect">
+            <img src="/public/logo.jpeg" class="organization-logo-small user-avatar" alt="logo">
+        </a>
+        <span class="organization-name-footer">2022 BebraCorp</span>
+    </div>
+</footer>
+
+</body>

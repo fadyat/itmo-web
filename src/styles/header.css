@@ -1,0 +1,54 @@
+.right-side-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+}
+
+.left-side-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-input {
+    display: flex;
+    margin: 0.5rem 2rem;
+    padding: 0.15rem;
+    border: var(--base-border);
+    border-radius: 0.2rem;
+    width: 12rem;
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem 0.15rem 0.15rem 0.3rem;
+}
+
+.navigation-item {
+    margin: 0.1rem 1rem;
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    color: var(--base-text-color);
+}
+
+.user-details {
+    width: 7.5rem;
+}
+
+.user-details-summary {
+    text-align: center;
+    cursor: pointer;
+    display:list-item;
+    justify-content: center;
+    list-style: none;
+}
+
+
+.user-avatar-header {
+    width: 2rem;
+}
+

@@ -1,0 +1,39 @@
+.organization-name-footer {
+    margin: 0.5rem 1rem;
+    padding: 0.4rem 3rem;
+    border-radius: 0.5rem;
+    color: var(--base-text-color);
+}
+
+.last-option {
+    border: none !important;
+}
+
+.user-options {
+    position: absolute;
+    background-color: var(--header-background-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.user-option {
+    list-style: none;
+    padding: 0.5rem 0;
+    border-bottom: var(--alpha-border);
+}
+
+.user-option-redirect {
+    display: flex;
+    justify-content: center;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--base-text-color);
+}
+
+.tab {
+    padding-left: 30px;
+}
+
+.tab2 {
+    padding-left: 60px;
+}
