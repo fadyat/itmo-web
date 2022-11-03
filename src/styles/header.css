@@ -2,7 +2,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    width: 20%;
     flex-direction: row;
 }
 
@@ -52,3 +52,8 @@
     width: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+    .header-input {
+        width: 8rem;
+    }
+}
