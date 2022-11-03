@@ -1,24 +1,21 @@
 .user-posts {
-    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 3rem;
+    width: 100%;
 }
 
 .posts-snippet {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .snippet-meta {
     display: flex;
     flex-direction: row;
     width: 60%;
-}
-
-.gists-filters {
-    width: 20%;
 }
 
 .gists-filters-list {
@@ -86,4 +83,17 @@
 .code-line-content {
     font-size: var(--normal-font-size);
     font-weight: unset;
+}
+
+.code-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.code-line:nth-child(odd) .code-line-number {
+    color: #49d7c6;
+}
+
+.code-line:nth-child(even) .code-line-number {
+    color: #59e571;
 }

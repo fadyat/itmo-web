@@ -28,6 +28,7 @@
     font-size: 0.85rem;
     text-decoration: none;
     color: var(--base-text-color);
+    padding: 0.3rem;
 }
 
 .tab {

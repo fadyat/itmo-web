@@ -40,13 +40,39 @@ main, footer, header {
 header {
     background-color: var(--header-background-color);
     display: flex;
+    justify-content: space-between;
 }
 
 main {
-    display: flex;
     margin-left: 3rem;
-    min-height: calc(100% - 8.3rem);
+    min-height: calc(100% - 6rem);
     box-sizing: content-box;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .user-profile {
+        align-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .user-posts {
+        width: revert;
+    }
+
+    .user-editable-content {
+        display: none;
+    }
+
 }
 
 footer {

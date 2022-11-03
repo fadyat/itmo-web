@@ -2,7 +2,6 @@
     text-align: center;
     border-radius: var(--base-button-border-radius);
     border: var(--alpha-border);
-    width: 7rem;
     font-weight: bold;
     text-decoration: none;
     background-color: var(--header-background-color);
