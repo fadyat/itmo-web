@@ -14,6 +14,7 @@
     --alpha-border: 0.1rem solid var(--alpha-color);
     --blue-color: #58a6ff;
     --normal-font-size: 0.8rem;
+    --code-font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
 }
 
 * {

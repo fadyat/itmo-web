@@ -2,16 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.createElement("header");
     header.innerHTML = `
             <div class="left-side-header">
-                <a href="#" class="organization-logo-redirect">
+                <!-- href will be correct, when will be imported -->
+                <a href="new.html" class="organization-logo-redirect">
                     <!-- src will be correct, when will be imported -->
-                    <img src="public/logo.jpeg" alt="logo" class="organization-logo-small user-avatar">
+                    <img src="src/images/logo.jpeg" alt="logo" class="organization-logo-small user-avatar">
                 </a>
                 <label title="search-input">
                     <input type="text" placeholder="Search..." class="header-input">
                 </label>
                 <nav class="header-navigation">
                     <!-- href will be correct, when will be imported -->
-                    <a href="discover.html" class="navigation-item base-button">All gists</a>
+                    <a href="discover.html" class="navigation-item base-button">All posts</a>
                     <a href="https://genius.com/artists/Mentaldora" class="navigation-item base-button">Back to dora</a>
                 </nav>
             </div>
