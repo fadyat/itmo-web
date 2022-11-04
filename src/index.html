@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Я аниме девочка</title>
 
+    <base href="{{site.baseurl}}"/>
+
     <link rel="stylesheet" href="/src/styles/footer.css">
     <link rel="stylesheet" href="/src/styles/header.css">
     <link rel="stylesheet" href="/src/styles/main/post.css">
@@ -23,7 +25,8 @@
 
 <main>
     <section class="user-profile">
-        <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4"
+        <img alt="avatar"
+             src="https://avatars.githubusercontent.com/u/70910148?v=4"
              class="user-avatar-body user-avatar"
         >
         <div class="user-editable-content">
@@ -31,7 +34,7 @@
             <h3 class="user-name">fadyat</h3>
             <div class="user-about">Я аниме девочка</div>
             <nav class="header-navigation">
-                <a href="./pages/my/settings.html"
+                <a href="#"
                    class="navigation-item base-button edit-profile-button">
                     Edit profile
                 </a>
@@ -46,17 +49,17 @@
             </div>
             <ul class="user-work-status">
                 <li class="user-organization-name with-icon">
-                    <img src="../public/org.png" alt="location" class="in-profile-icon">
+                    <img src="/public/org.png" alt="location" class="in-profile-icon">
                     GitHub, Copilot-developer
                 </li>
                 <li class="user-location with-icon">
-                    <img src="../public/location.png" alt="location" class="in-profile-icon">
+                    <img src="/public/location.png" alt="location" class="in-profile-icon">
                     Near you
                 </li>
             </ul>
             <div class="user-contacts">
                 <div class="user-contact with-icon">
-                    <img src="../public/tg.svg" alt="tg-icon" class="in-profile-icon">
+                    <img src="/public/tg.svg" alt="tg-icon" class="in-profile-icon">
                     <a href="https://t.me/not_fadyat"
                        class="user-option-redirect"
                        style="padding: 0">
@@ -69,15 +72,15 @@
     <section class="posts">
         <div class="posts-snippet">
             <nav class="snippet-meta">
-                <a href="pages/my/my.html"
+                <a href="#"
                    class="snippet-option base-button navigation-item user-option-redirect">
                     My posts
                 </a>
-                <a href="pages/my/forked.html"
+                <a href="#"
                    class="snippet-option base-button navigation-item user-option-redirect">
                     Forked posts
                 </a>
-                <a href="pages/my/starred.html"
+                <a href="#"
                    class="snippet-option base-button navigation-item user-option-redirect">
                     Starred posts
                 </a>
@@ -88,7 +91,7 @@
                 </summary>
                 <ul class="base-button user-options posts-filters-list">
                     <li class="user-option">
-                        <a href="./pages/my/my.html" class="user-option-redirect">All posts</a>
+                        <a href="#" class="user-option-redirect">All posts</a>
                     </li>
                     <li class="user-option">
                         <a href="#" class="user-option-redirect">Public posts</a>
