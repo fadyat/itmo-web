@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="post-meta">
     <div class="post-changes-info">
         <span class="post-path">
-            <a href="/src/index.html" class="post-author">fadyat</a>
+            <!-- href will be correct, when will be imported -->
+            <a href="index.html" class="post-author">fadyat</a>
             /
             <a href="#" class="post-name">bebra.py</a>
         </span>

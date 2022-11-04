@@ -1,1 +1,106 @@
-<meta http-equiv="refresh" content="0; url=https://fadyat.github.io/itmo-web/src/index.html">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Я аниме девочка</title>
+
+    <link rel="stylesheet" href="src/styles/footer.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/main/post.css">
+    <link rel="stylesheet" href="src/styles/main/profile.css">
+    <link rel="stylesheet" href="src/styles/constants.css">
+    <link rel="stylesheet" href="src/styles/components/icon.css">
+    <link rel="stylesheet" href="src/styles/components/text.css">
+    <link rel="stylesheet" href="src/styles/components/button.css">
+    <link rel="stylesheet" href="src/styles/normalize.css">
+
+    <script src="src/scripts/load-header.js" defer></script>
+    <script src="src/scripts/load-footer.js" defer></script>
+    <script src="src/scripts/load-time.js" defer></script>
+    <script src="src/scripts/load-post-example.js" defer></script>
+</head>
+<body>
+
+<main>
+    <section class="user-profile">
+        <img alt="avatar"
+             src="https://avatars.githubusercontent.com/u/70910148?v=4"
+             class="user-avatar-body user-avatar"
+        >
+        <div class="user-editable-content">
+            <h1 class="user-actual-name">Artyom Fadeyev</h1>
+            <h3 class="user-name">fadyat</h3>
+            <div class="user-about">Я аниме девочка</div>
+            <nav class="header-navigation">
+                <a href="#"
+                   class="navigation-item base-button edit-profile-button">
+                    Edit profile
+                </a>
+            </nav>
+            <div class="user-follows">
+                <a href="#" class="follows-redirect">
+                    <span class="follows-number">14</span> followers
+                </a>
+                <a href="#" class="follows-redirect">
+                    <span class="follows-number">1</span> following
+                </a>
+            </div>
+            <ul class="user-work-status">
+                <li class="user-organization-name with-icon">
+                    <img src="public/org.png" alt="location" class="in-profile-icon">
+                    GitHub, Copilot-developer
+                </li>
+                <li class="user-location with-icon">
+                    <img src="public/location.png" alt="location" class="in-profile-icon">
+                    Near you
+                </li>
+            </ul>
+            <div class="user-contacts">
+                <div class="user-contact with-icon">
+                    <img src="public/tg.svg" alt="tg-icon" class="in-profile-icon">
+                    <a href="https://t.me/not_fadyat"
+                       class="user-option-redirect"
+                       style="padding: 0">
+                        @not_fadyat
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="posts">
+        <div class="posts-snippet">
+            <nav class="snippet-meta">
+                <a href="#"
+                   class="snippet-option base-button navigation-item user-option-redirect">
+                    My posts
+                </a>
+                <a href="#"
+                   class="snippet-option base-button navigation-item user-option-redirect">
+                    Forked posts
+                </a>
+                <a href="#"
+                   class="snippet-option base-button navigation-item user-option-redirect">
+                    Starred posts
+                </a>
+            </nav>
+            <details class="user-details">
+                <summary class="user-details-summary">
+                    <span class="base-button user-option-redirect navigation-item">Filter</span>
+                </summary>
+                <ul class="base-button user-options posts-filters-list">
+                    <li class="user-option">
+                        <a href="#" class="user-option-redirect">All posts</a>
+                    </li>
+                    <li class="user-option">
+                        <a href="#" class="user-option-redirect">Public posts</a>
+                    </li>
+                    <li class="user-option last-option">
+                        <a href="#" class="user-option-redirect">Secret posts</a>
+                    </li>
+                </ul>
+            </details>
+        </div>
+    </section>
+</main>
+
+</body>

@@ -3,13 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     header.innerHTML = `
             <div class="left-side-header">
                 <a href="#" class="organization-logo-redirect">
-                    <img src="/public/logo.jpeg" alt="logo" class="organization-logo-small user-avatar">
+                    <!-- src will be correct, when will be imported -->
+                    <img src="public/logo.jpeg" alt="logo" class="organization-logo-small user-avatar">
                 </a>
                 <label title="search-input">
                     <input type="text" placeholder="Search..." class="header-input">
                 </label>
                 <nav class="header-navigation">
-                    <a href="/src/pages/global/discover.html" class="navigation-item base-button">All gists</a>
+                    <!-- href will be correct, when will be imported -->
+                    <a href="discover.html" class="navigation-item base-button">All gists</a>
                     <a href="https://genius.com/artists/Mentaldora" class="navigation-item base-button">Back to dora</a>
                 </nav>
             </div>
@@ -23,7 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </summary>
                     <ul class="base-button user-options">
                         <li class="user-option">
-                            <a href="/src/index.html" class="user-option-redirect">Your profile</a>
+                            <!-- href will be correct, when will be imported -->
+                            <a href="index.html" class="user-option-redirect">Your profile</a>
                         </li>
                         <li class="user-option">
                             <a href="#" class="user-option-redirect">Help</a>
