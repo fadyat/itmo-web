@@ -2,6 +2,7 @@
     --background-color: #0d1117;
     --header-background-color: #161b22;
     --footer-background-color: #161b22;
+    --hover-background-color: #21262d;
     --base-border: #e6e6e6 0.1rem solid;
     --base-text-color: white;
     --base-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -47,6 +48,10 @@ main {
     margin-left: 3rem;
     min-height: calc(100% - 6rem);
     box-sizing: content-box;
+    flex-direction: row;
+}
+
+footer {
     flex-direction: row;
 }
 

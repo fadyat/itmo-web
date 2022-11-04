@@ -18,7 +18,7 @@
     width: 60%;
 }
 
-.gists-filters-list {
+.posts-filters-list {
     margin-left: 1rem;
 }
 
@@ -51,7 +51,6 @@
     padding-top: 0.3rem;
 }
 
-
 .post-info {
     display: flex;
     margin-right: 2rem;
@@ -64,7 +63,6 @@
     padding: 0.2rem;
     font-size: var(--normal-font-size);
 }
-
 
 .post-content {
     padding: 1rem 0;
@@ -88,6 +86,10 @@
 .code-table {
     width: 100%;
     border-collapse: collapse;
+}
+
+.post-content:hover {
+    border-color: var(--blue-color);
 }
 
 .code-line:nth-child(odd) .code-line-number {

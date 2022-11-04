@@ -12,55 +12,14 @@
     <link rel="stylesheet" href="styles/components/text.css">
     <link rel="stylesheet" href="styles/components/button.css">
     <link rel="stylesheet" href="styles/normalize.css">
+
+    <script src="scripts/load-header.js" defer></script>
+    <script src="scripts/load-footer.js" defer></script>
+    <script src="scripts/load-time.js" defer></script>
 </head>
 <body>
-<!--<script-->
-<!--        src="https://rawcdn.githack.com/ArtMan-8/outline-prototype/e73da2a1ee9031564b56ed5d98541891f7123933/js/outline-control.js"-->
-<!--&gt;-->
-<!--</script>-->
-<header>
-    <div class="left-side-header">
-        <a href="#" class="organization-logo-redirect">
-            <img src="../public/logo.jpeg" alt="logo" class="organization-logo-small user-avatar">
-        </a>
-        <label title="search-input">
-            <input type="text" placeholder="Search..." class="header-input">
-        </label>
-        <nav class="header-navigation">
-            <a href="#" class="navigation-item base-button">All gists</a>
-            <a href="#" class="navigation-item base-button">Back to dora</a>
-        </nav>
-    </div>
-    <div class="right-side-header">
-        <details class="user-details">
-            <summary class="user-details-summary">
-                <img alt="avatar" src="https://avatars.githubusercontent.com/u/70910148?v=4"
-                     class="user-avatar user-avatar-header"
-                >
-            </summary>
-            <ul class="base-button user-options">
-                <li class="user-option">
-                    <a href="#" class="user-option-redirect">Your profile</a>
-                </li>
-                <li class="user-option">
-                    <a href="#" class="user-option-redirect">Your gists</a>
-                </li>
-                <li class="user-option">
-                    <a href="#" class="user-option-redirect">Starred gists</a>
-                </li>
-                <li class="user-option">
-                    <a href="#" class="user-option-redirect">Help</a>
-                </li>
-                <li class="user-option">
-                    <a href="#" class="user-option-redirect">Settings</a>
-                </li>
-                <li class="user-option last-option">
-                    <a href="#" class="user-option-redirect">Sign out</a>
-                </li>
-            </ul>
-        </details>
-    </div>
-</header>
+
+<!--<script src="https://rawcdn.githack.com/ArtMan-8/outline-prototype/e73da2a1ee9031564b56ed5d98541891f7123933/js/outline-control.js"></script>-->
 
 <main>
     <section class="user-profile">
@@ -72,7 +31,10 @@
             <h3 class="user-name">fadyat</h3>
             <div class="user-about">Я аниме девочка</div>
             <nav class="header-navigation">
-                <a href="#" class="navigation-item base-button edit-profile-button">Edit profile</a>
+                <a href="./pages/my/settings.html"
+                   class="navigation-item base-button edit-profile-button">
+                    Edit profile
+                </a>
             </nav>
             <div class="user-follows">
                 <a href="#" class="follows-redirect">
@@ -95,7 +57,11 @@
             <div class="user-contacts">
                 <div class="user-contact with-icon">
                     <img src="../public/tg.svg" alt="tg-icon" class="in-profile-icon">
-                    <a href="#" class="user-option-redirect">мемы в тэгэ</a>
+                    <a href="https://t.me/not_fadyat"
+                       class="user-option-redirect"
+                       style="padding: 0">
+                        @not_fadyat
+                    </a>
                 </div>
             </div>
         </div>
@@ -103,26 +69,32 @@
     <section class="user-posts">
         <div class="posts-snippet">
             <nav class="snippet-meta">
-                <a href="#" class="snippet-option base-button navigation-item user-option-redirect">My posts</a>
-                <a href="#" class="snippet-option base-button navigation-item user-option-redirect">Forked posts</a>
-                <a href="#" class="snippet-option base-button navigation-item user-option-redirect">Starred posts</a>
+                <a href="pages/my/my.html"
+                   class="snippet-option base-button navigation-item user-option-redirect">
+                    My posts
+                </a>
+                <a href="pages/my/forked.html"
+                   class="snippet-option base-button navigation-item user-option-redirect">
+                    Forked posts
+                </a>
+                <a href="pages/my/starred.html"
+                   class="snippet-option base-button navigation-item user-option-redirect">
+                    Starred posts
+                </a>
             </nav>
             <details class="user-details">
                 <summary class="user-details-summary">
                     <span class="base-button user-option-redirect navigation-item">Filter</span>
                 </summary>
-                <ul class="base-button user-options gists-filters-list">
+                <ul class="base-button user-options posts-filters-list">
                     <li class="user-option">
-                        <a href="#" class="user-option-redirect">All gists</a>
+                        <a href="./pages/my/my.html" class="user-option-redirect">All posts</a>
                     </li>
                     <li class="user-option">
-                        <a href="#" class="user-option-redirect">Public gists</a>
-                    </li>
-                    <li class="user-option">
-                        <a href="#" class="user-option-redirect">Secret gists</a>
+                        <a href="#" class="user-option-redirect">Public posts</a>
                     </li>
                     <li class="user-option last-option">
-                        <a href="#" class="user-option-redirect">Starred gists</a>
+                        <a href="#" class="user-option-redirect">Secret posts</a>
                     </li>
                 </ul>
             </details>
@@ -131,7 +103,7 @@
             <div class="post-meta">
                 <div class="post-changes-info">
                     <span class="post-path">
-                        <a href="#" class="post-author">fadyat</a>
+                        <a href="./index.html" class="post-author">fadyat</a>
                         /
                         <a href="#" class="post-name">bebra.py</a>
                     </span>
@@ -225,14 +197,5 @@
         </div>
     </section>
 </main>
-
-<footer>
-    <div class="left-side-footer">
-        <a href="#" class="organization-logo-redirect">
-            <img src="../public/logo.jpeg" class="organization-logo-small user-avatar" alt="logo">
-        </a>
-        <span class="organization-name-footer">2022 BebraCorp</span>
-    </div>
-</footer>
 
 </body>
