@@ -1,4 +1,4 @@
-.user-posts {
+.posts {
     display: flex;
     flex-direction: column;
     padding: 3rem;
@@ -68,6 +68,7 @@
     padding: 1rem 0;
     border: var(--alpha-border);
     border-radius: var(--base-button-border-radius);
+    user-select: none;
 }
 
 .code-line-number {

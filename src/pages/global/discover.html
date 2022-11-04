@@ -3,8 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>All posts</title>
+
+    <script src="/src/scripts/load-header.js" defer></script>
+    <script src="/src/scripts/load-footer.js" defer></script>
+    <script src="/src/scripts/load-time.js" defer></script>
+
+    <link rel="stylesheet" href="/src/styles/footer.css">
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="stylesheet" href="/src/styles/main/post.css">
+    <link rel="stylesheet" href="/src/styles/main/profile.css">
+    <link rel="stylesheet" href="/src/styles/constants.css">
+    <link rel="stylesheet" href="/src/styles/components/icon.css">
+    <link rel="stylesheet" href="/src/styles/components/text.css">
+    <link rel="stylesheet" href="/src/styles/components/button.css">
+    <link rel="stylesheet" href="/src/styles/normalize.css">
+    <script src="/src/scripts/load-post-example.js" defer></script>
+    <script src="/src/scripts/load-post-example.js" defer></script>
+    <script src="/src/scripts/load-post-example.js" defer></script>
 </head>
+
 <body>
-    All global posts
+<main>
+    <div class="posts">
+        <div class="posts-snippet">
+            <nav class="snippet-meta">
+                <a href="/src/pages/my/my.html"
+                   class="snippet-option base-button navigation-item user-option-redirect">
+                    My posts
+                </a>
+                <a href="/src/pages/my/forked.html"
+                   class="snippet-option base-button navigation-item user-option-redirect">
+                    Forked posts
+                </a>
+                <a href="/src/pages/my/starred.html"
+                   class="snippet-option base-button navigation-item user-option-redirect">
+                    Starred posts
+                </a>
+            </nav>
+            <details class="user-details">
+                <summary class="user-details-summary">
+                    <span class="base-button user-option-redirect navigation-item">Filter</span>
+                </summary>
+                <ul class="base-button user-options posts-filters-list">
+                    <li class="user-option">
+                        <a href="/src/pages/my/my.html" class="user-option-redirect">All posts</a>
+                    </li>
+                    <li class="user-option">
+                        <a href="#" class="user-option-redirect">Public posts</a>
+                    </li>
+                    <li class="user-option last-option">
+                        <a href="#" class="user-option-redirect">Secret posts</a>
+                    </li>
+                </ul>
+            </details>
+        </div>
+    </div>
+</main>
 </body>
 </html>
