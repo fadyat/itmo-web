@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </label>
                 <nav class="header-navigation">
                     <!-- href will be correct, when will be imported -->
-                    <a href="discover.html" class="navigation-item base-button">All gists</a>
+                    <a href="discover.html" class="navigation-item base-button">All posts</a>
                     <a href="https://genius.com/artists/Mentaldora" class="navigation-item base-button">Back to dora</a>
                 </nav>
             </div>

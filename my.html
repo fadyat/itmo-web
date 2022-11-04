@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>All posts</title>
-
+    <title>New post</title>
     <link rel="stylesheet" href="src/styles/footer.css">
     <link rel="stylesheet" href="src/styles/header.css">
     <link rel="stylesheet" href="src/styles/main/post.css">
@@ -13,12 +12,12 @@
     <link rel="stylesheet" href="src/styles/components/text.css">
     <link rel="stylesheet" href="src/styles/components/button.css">
     <link rel="stylesheet" href="src/styles/normalize.css">
+    <link rel="stylesheet" href="src/styles/components/notify.css">
 
     <script src="src/scripts/loaders/load-header.js"></script>
     <script src="src/scripts/loaders/load-footer.js"></script>
     <script src="src/scripts/loaders/load-time.js"></script>
-    <script src="src/scripts/loaders/load-post-example.js"></script>
-    <script src="src/scripts/loaders/load-post-example.js"></script>
+    <script src="src/scripts/handlers/render-post.js"></script>
     <script src="src/scripts/utils.js"></script>
 </head>
 
@@ -26,9 +25,10 @@
 <main>
     <div class="posts" style="padding-top: 0">
         <h2 class="awesome-title">
-            Global awesome posts!
+            Your awesome posts!
         </h2>
     </div>
+    <script src="src/scripts/handlers/put-post.js"></script>
 </main>
 </body>
 </html>

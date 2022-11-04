@@ -12,44 +12,55 @@
     <link rel="stylesheet" href="src/styles/components/text.css">
     <link rel="stylesheet" href="src/styles/components/button.css">
     <link rel="stylesheet" href="src/styles/normalize.css">
+    <link rel="stylesheet" href="src/styles/components/notify.css">
 
-    <script src="src/scripts/load-header.js"></script>
-    <script src="src/scripts/load-footer.js"></script>
-    <script src="src/scripts/load-time.js"></script>
-    <script src="src/scripts/mark-active-page.js"></script>
-    <script src="src/scripts/allow-tab.js"></script>
+    <script src="src/scripts/loaders/load-header.js"></script>
+    <script src="src/scripts/loaders/load-footer.js"></script>
+    <script src="src/scripts/loaders/load-time.js"></script>
+    <script src="src/scripts/handlers/render-post.js"></script>
+    <script src="src/scripts/utils.js"></script>
 </head>
 
 <body>
 <main>
     <section class="new-post">
-        <h2 class="new-post-title">
+        <h2 class="awesome-title">
             Awesome post is coming!
         </h2>
-        <form class="new-post-form">
+        <form class="new-post-form"
+              id="new-post-form"
+              name="new-post-form"
+              method="post"
+        >
             <label for="post-description" class="new-post-label"></label>
             <input type="text"
                    id="post-description"
                    class="new-post-item"
                    placeholder="Description"
+                   name="description"
             >
             <label for="post-filename" class="new-post-label"></label>
             <input type="text"
                    id="post-filename"
                    class="new-post-item"
                    placeholder="Filename"
+                   name="filename"
             >
             <label for="post-content" class="new-post-label"></label>
             <textarea id="post-content"
                       class="new-post-item new-post-content"
-                      placeholder="print('Hello aboba!')&#10;"></textarea>
+                      placeholder="print('Hello aboba!')&#10;"
+                      name="content"
+            ></textarea>
             <button type="submit"
                     class="new-post-submit base-button navigation-item"
             >
                 Submit
             </button>
         </form>
+        <div class="posts"></div>
     </section>
+    <script src="src/scripts/handlers/put-post.js"></script>
 </main>
 </body>
 </html>
