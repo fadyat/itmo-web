@@ -42,7 +42,7 @@
 .user-details-summary {
     text-align: center;
     cursor: pointer;
-    display:list-item;
+    display: list-item;
     justify-content: center;
     list-style: none;
 }
@@ -56,4 +56,9 @@
     .header-input {
         width: 8rem;
     }
+}
+
+.active {
+    background-color: var(--hover-background-color) !important;
+    pointer-events: none;
 }

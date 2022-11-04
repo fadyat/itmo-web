@@ -1,4 +1,4 @@
-.user-posts {
+.posts {
     display: flex;
     flex-direction: column;
     padding: 3rem;
@@ -18,7 +18,7 @@
     width: 60%;
 }
 
-.gists-filters-list {
+.posts-filters-list {
     margin-left: 1rem;
 }
 
@@ -51,7 +51,6 @@
     padding-top: 0.3rem;
 }
 
-
 .post-info {
     display: flex;
     margin-right: 2rem;
@@ -65,11 +64,11 @@
     font-size: var(--normal-font-size);
 }
 
-
 .post-content {
     padding: 1rem 0;
     border: var(--alpha-border);
     border-radius: var(--base-button-border-radius);
+    user-select: none;
 }
 
 .code-line-number {
@@ -88,6 +87,10 @@
 .code-table {
     width: 100%;
     border-collapse: collapse;
+}
+
+.post-content:hover {
+    border-color: var(--blue-color);
 }
 
 .code-line:nth-child(odd) .code-line-number {

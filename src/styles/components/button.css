@@ -7,6 +7,10 @@
     background-color: var(--header-background-color);
 }
 
+.base-button:hover {
+    background-color: var(--hover-background-color);
+}
+
 .edit-profile-button {
     min-width: 100%;
     box-sizing: border-box;

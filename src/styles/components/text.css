@@ -6,7 +6,7 @@
 }
 
 .last-option {
-    border: none !important;
+    border-bottom: none !important;
 }
 
 .user-options {
@@ -16,11 +16,30 @@
     align-items: center;
 }
 
+.user-options:hover {
+    background-color: var(--header-background-color) !important;
+}
+
 .user-option {
     list-style: none;
     padding: 0.5rem 0;
     border-bottom: var(--alpha-border);
 }
+
+.user-option:hover {
+    background-color: var(--hover-background-color);
+}
+
+.user-option:nth-child(1) {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.last-option:nth-child(n) {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
 
 .user-option-redirect {
     display: flex;
