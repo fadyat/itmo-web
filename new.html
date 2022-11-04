@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New post</title>
+    <link rel="stylesheet" href="src/styles/footer.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/main/post.css">
+    <link rel="stylesheet" href="src/styles/main/profile.css">
+    <link rel="stylesheet" href="src/styles/constants.css">
+    <link rel="stylesheet" href="src/styles/components/icon.css">
+    <link rel="stylesheet" href="src/styles/components/text.css">
+    <link rel="stylesheet" href="src/styles/components/button.css">
+    <link rel="stylesheet" href="src/styles/normalize.css">
+
+    <script src="src/scripts/load-header.js"></script>
+    <script src="src/scripts/load-footer.js"></script>
+    <script src="src/scripts/load-time.js"></script>
+    <script src="src/scripts/mark-active-page.js"></script>
+    <script src="src/scripts/allow-tab.js"></script>
+</head>
+
+<body>
+<main>
+    <section class="new-post">
+        <h2 class="new-post-title">
+            Awesome post is coming!
+        </h2>
+        <form class="new-post-form">
+            <label for="post-description" class="new-post-label"></label>
+            <input type="text"
+                   id="post-description"
+                   class="new-post-item"
+                   placeholder="Description"
+            >
+            <label for="post-filename" class="new-post-label"></label>
+            <input type="text"
+                   id="post-filename"
+                   class="new-post-item"
+                   placeholder="Filename"
+            >
+            <label for="post-content" class="new-post-label"></label>
+            <textarea id="post-content"
+                      class="new-post-item new-post-content"
+                      placeholder="print('Hello aboba!')&#10;"></textarea>
+            <button type="submit"
+                    class="new-post-submit base-button navigation-item"
+            >
+                Submit
+            </button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

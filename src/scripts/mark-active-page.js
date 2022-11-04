@@ -3,10 +3,11 @@
         const currentPath = location.pathname.split('/').pop();
         const activeLinks = document.querySelectorAll(`header a[href="${currentPath}"]`);
         activeLinks.forEach((link) => {
-            link.classList.add('active');
-            const parent = link.parentElement;
-            if (parent.classList.contains('user-option')) {
-                parent.classList.add('active');
+            if (!link.classList.contains('organization-logo-redirect')) {
+                link.classList.add('active');
+            }
+            if (link.parentElement.classList.contains('user-option')) {
+                link.parentElement.classList.add('active');
             }
         });
     });
