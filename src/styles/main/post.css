@@ -69,6 +69,7 @@
     border: var(--alpha-border);
     border-radius: var(--base-button-border-radius);
     user-select: none;
+    overflow: hidden;
 }
 
 .code-line-number {
@@ -90,7 +91,7 @@
 }
 
 .code-line-content * {
-    margin: 0 !important;
+    margin: 0.1rem !important;
     padding: 0 !important;
     font-family: var(--code-font-family) !important;
 }

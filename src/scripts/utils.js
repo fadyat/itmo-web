@@ -1,18 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const textarea = document.querySelector('textarea')
-    if (!textarea) {
-        return;
-    }
-
-    textarea.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-            e.preventDefault()
-            const tab = " ".repeat(4)
-            textarea.setRangeText(tab, textarea.selectionStart, textarea.selectionStart, 'end')
-        }
-    })
-});
-
 function getDatesDiff(date) {
     const diffTime = Math.abs(new Date() - new Date(date));
     const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));

@@ -42,18 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
         postData['lastChange'] = new Date().toUTCString();
         addPost(postData);
         form.reset();
+        const code = document.querySelector("#highlighting-content");
+        code.innerHTML = '';
         renderPostInPlace(postData);
-    });
-
-    form.addEventListener('input', (e) => {
-        const target = e.target;
-        const value = target.value;
-
-        if (!value) {
-            target.classList.add('error');
-            return;
-        }
-
-        target.classList.remove('error');
     });
 });

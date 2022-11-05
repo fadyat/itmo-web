@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="src/styles/components/button.css">
     <link rel="stylesheet" href="src/styles/normalize.css">
     <link rel="stylesheet" href="src/styles/components/notify.css">
+    <link rel="stylesheet" href="src/styles/components/editor.css">
 
     <script src="src/scripts/loaders/load-header.js"></script>
     <script src="src/scripts/loaders/load-footer.js"></script>
@@ -51,12 +52,23 @@
                    placeholder="Filename"
                    name="filename"
             >
-            <label for="post-content" class="new-post-label"></label>
-            <textarea id="post-content"
-                      class="new-post-item new-post-content"
+            <label for="editing" class="new-post-label"></label>
+            <textarea class="new-post-item new-post-content"
+                      id="editing"
                       placeholder="print('Hello aboba!')&#10;"
                       name="content"
+                      spellcheck="false"
             ></textarea>
+            <pre aria-hidden="true"
+                 class="new-post-item new-post-content"
+                 id="highlighting"
+                 style="margin-top: -22.7rem"
+            >
+                <code id="highlighting-content"
+                      class="code-line-content"
+                >
+                </code>
+            </pre>
             <button type="submit"
                     class="new-post-submit base-button navigation-item"
             >

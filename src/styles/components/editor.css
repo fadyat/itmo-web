@@ -1,0 +1,19 @@
+#editing {
+    z-index: 1;
+    color: transparent;
+    background: transparent;
+    caret-color: white;
+    -ms-overflow-style: none;
+}
+
+#highlighting {
+    z-index: 0;
+}
+
+#editing, #highlighting {
+    overflow: auto;
+}
+
+#editing::-webkit-scrollbar {
+    display: none;
+}
