@@ -1,0 +1,84 @@
+.followers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 3rem 0;
+}
+
+.follower-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.prev-page {
+    pointer-events: none;
+}
+
+.followers-sort {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    align-self: flex-end;
+}
+
+.followers-page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin: 1.5rem 3rem 1.5rem 1.5rem;
+}
+
+.follower {
+    display: flex;
+    flex-direction: row;
+    border: var(--alpha-border);
+    border-radius: 1.5rem;
+    font-size: var(--normal-font-size);
+    align-items: center;
+    margin: 0.5rem 3rem;
+}
+
+.follower-avatar {
+    margin: 0.5rem;
+    padding: 0.5%;
+}
+
+.follower-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.follower-names {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.follower-name {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.follower-username {
+    color: var(--grey-color);
+}
+
+.follower-profile-description {
+    margin-top: 0.2rem;
+    color: var(--grey-color);
+}
+
+.follower-locations {
+    display: flex;
+}
+
+.follower-location {
+    color: var(--grey-color);
+    margin-right: 2rem;
+}

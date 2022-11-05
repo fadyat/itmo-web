@@ -47,7 +47,7 @@ header {
 
 main {
     margin-left: 3rem;
-    min-height: calc(100% - 6rem);
+    min-height: calc(100% - 8.6rem);
     box-sizing: content-box;
     flex-direction: row;
 }
@@ -69,6 +69,7 @@ footer {
         align-content: center;
         align-items: center;
         width: 100%;
+        margin: 0;
     }
 
     .posts {
@@ -76,7 +77,24 @@ footer {
     }
 
     .user-editable-content {
-        display: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .user-editable-content > * {
+        margin: 0 10rem;
+    }
+
+    .user-profile {
+        padding-bottom: 0;
+    }
+
+    .followers {
+        width: revert;
+    }
+
+    .followers-sort {
+        align-self: center !important;
     }
 
 }

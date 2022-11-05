@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New post</title>
+    <title>fadyat followers</title>
+
     <link rel="stylesheet" href="src/styles/footer.css">
     <link rel="stylesheet" href="src/styles/header.css">
     <link rel="stylesheet" href="src/styles/main/post.css">
@@ -13,22 +14,28 @@
     <link rel="stylesheet" href="src/styles/components/button.css">
     <link rel="stylesheet" href="src/styles/normalize.css">
     <link rel="stylesheet" href="src/styles/components/notify.css">
+    <link rel="stylesheet" href="src/styles/components/followers.css">
 
     <script src="src/scripts/loaders/load-header.js"></script>
     <script src="src/scripts/loaders/load-footer.js"></script>
-    <script src="src/scripts/handlers/render-post.js"></script>
+    <script src="src/scripts/loaders/load-profile.js"></script>
     <script src="src/scripts/utils.js"></script>
+    <script src="src/api/users.js"></script>
     <script src="src/scripts/loaders/load-time.js"></script>
 </head>
-
 <body>
 <main>
-    <div class="posts" style="padding-top: 0">
+    <section class="user-profile"></section>
+    <section class="followers">
         <h2 class="awesome-title">
-            Your awesome posts!
+            Your awesome followers!
         </h2>
-    </div>
-    <script src="src/scripts/handlers/put-post.js"></script>
+        <div class="followers-list"></div>
+        <div class="followers-sort">
+            <div class="followers-page base-button prev-page"><</div>
+            <div class="followers-page base-button next-page">></div>
+        </div>
+    </section>
 </main>
 </body>
 </html>
