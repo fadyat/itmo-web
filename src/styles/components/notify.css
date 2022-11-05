@@ -3,3 +3,22 @@
     border-color: #ebccd1;
     color: #a94442;
 }
+
+.fetch-error {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ebccd1;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.fetch-error-message {
+    color: #a94442;
+    font-family: var(--code-font-family);
+    text-decoration: underline;
+    font-size: 1rem;
+    text-underline-offset: 0.1rem;
+}
