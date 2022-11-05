@@ -1,9 +1,3 @@
-const addPost = (post) => {
-    let storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
-    storedPosts.push(post);
-    localStorage.setItem('posts', JSON.stringify(storedPosts));
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const storedPosts = JSON.parse(localStorage.getItem('posts'));
 
