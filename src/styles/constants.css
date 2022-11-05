@@ -89,10 +89,6 @@ footer {
         padding-bottom: 0;
     }
 
-    .followers {
-        width: revert;
-    }
-
     .followers-sort {
         align-self: center !important;
     }

@@ -5,14 +5,13 @@
     margin: 3rem 0;
 }
 
-.follower-list {
+.followers-list {
+    width: 100%;
+    height: 25rem;
     display: flex;
     flex-direction: column;
-    width: 100%;
-}
-
-.prev-page {
-    pointer-events: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .followers-sort {
@@ -37,7 +36,8 @@
     border-radius: 1.5rem;
     font-size: var(--normal-font-size);
     align-items: center;
-    margin: 0.5rem 3rem;
+    width: 80%;
+    margin: 0.5rem 0;
 }
 
 .follower-avatar {
