@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPostInPlace(postData);
     });
 
-    form.addEventListener('change', (e) => {
+    form.addEventListener('input', (e) => {
         const target = e.target;
         const value = target.value;
 

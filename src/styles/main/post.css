@@ -69,7 +69,6 @@
     border: var(--alpha-border);
     border-radius: var(--base-button-border-radius);
     user-select: none;
-
 }
 
 .code-line-number {
@@ -82,9 +81,18 @@
 }
 
 .code-line-content {
-    font-size: var(--normal-font-size);
-    font-weight: unset;
-    font-family: var(--code-font-family);
+    font-size: var(--normal-font-size) !important;
+    font-weight: unset !important;
+    font-family: var(--code-font-family) !important;
+    margin: 0.1rem 0 !important;
+    padding: 0 !important;
+    background-color: unset !important;
+}
+
+.code-line-content * {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: var(--code-font-family) !important;
 }
 
 .code-table {
