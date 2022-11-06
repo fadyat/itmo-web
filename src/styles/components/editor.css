@@ -4,6 +4,7 @@
     background: transparent;
     caret-color: white;
     -ms-overflow-style: none;
+    white-space: nowrap;
 }
 
 #highlighting {
