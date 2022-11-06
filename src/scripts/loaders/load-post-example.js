@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </tr>
         <tr class="code-line">
             <td class="code-line-number">7</td>
-            <td class="code-line-content">&nbsp;&nbsp;&nbsp;&nbsp;gigachad: gigachad.Gigachad,</td>
+            <td class="code-line-content">    gigachad: gigachad.Gigachad,</td>
         </tr>
         <tr class="code-line">
             <td class="code-line-number">8</td>
@@ -57,19 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
         </tr>
         <tr class="code-line">
             <td class="code-line-number">9</td>
-            <td class="code-line-content">&nbsp;&nbsp;&nbsp;&nbsp;flex_value = random.randint(0, 100)</td>
+            <td class="code-line-content">    flex_value = random.randint(0, 100)</td>
         </tr>
         <tr class="code-line">
             <td class="code-line-number">10</td>
-            <td class="code-line-content">&nbsp;&nbsp;&nbsp;&nbsp;while flex_value:</td>
+            <td class="code-line-content">    while flex_value:</td>
         </tr>
         <tr class="code-line">
             <td class="code-line-number">11</td>
-            <td class="code-line-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flex_value -= 1</td>
+            <td class="code-line-content">        flex_value -= 1</td>
         </tr>
         <tr class="code-line">
             <td class="code-line-number">12</td>
-            <td class="code-line-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f'{gigachad.name} flexing so hard')</td>
+            <td class="code-line-content">        print(f'{gigachad.name} flexing so hard')</td>
         </tr>
         <tr class="code-line">
             <td class="code-line-number">13</td>
@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
         </tr>
         <tr class="code-line">
             <td class="code-line-number">16</td>
-            <td class="code-line-content">&nbsp;&nbsp;&nbsp;&nbsp;gigachad_instance = gigachad.Gigachad()</td>
+            <td class="code-line-content">    gigachad_instance = gigachad.Gigachad()</td>
         </tr>
         <tr class="code-line">
             <td class="code-line-number">17</td>
-            <td class="code-line-content">&nbsp;&nbsp;&nbsp;&nbsp;flexing(gigachad_instance)</td>
+            <td class="code-line-content">    flexing(gigachad_instance)</td>
         </tr>
         <tr class="code-line">
             <td class="code-line-number">18</td>

@@ -69,7 +69,7 @@
     border: var(--alpha-border);
     border-radius: var(--base-button-border-radius);
     user-select: none;
-
+    overflow: hidden;
 }
 
 .code-line-number {
@@ -82,9 +82,18 @@
 }
 
 .code-line-content {
-    font-size: var(--normal-font-size);
-    font-weight: unset;
-    font-family: var(--code-font-family);
+    font-size: var(--normal-font-size) !important;
+    font-weight: unset !important;
+    font-family: var(--code-font-family) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: unset !important;
+}
+
+.code-line-content * {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: var(--code-font-family) !important;
 }
 
 .code-table {
@@ -141,7 +150,7 @@
     font-family: var(--code-font-family);
     border: var(--alpha-border);
     border-radius: var(--base-button-border-radius);
-    padding: 0.5rem;
+    padding: 0.7rem 1rem;
     background-color: var(--footer-background-color);
     outline: none;
     color: white;
@@ -159,6 +168,8 @@
 .new-post-content {
     resize: none;
     height: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .new-post-submit {

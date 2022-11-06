@@ -9,6 +9,12 @@ function createPost(postData) {
     return post;
 }
 
+function addPost(post) {
+    let storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
+    storedPosts.push(post);
+    localStorage.setItem('posts', JSON.stringify(storedPosts));
+}
+
 function createPostMeta(postDescription, postAuthor, postFilename, postLastChange) {
     const postMeta = document.createElement('div');
     postMeta.classList.add('post-meta');
@@ -66,7 +72,7 @@ function createTableLine(line, index) {
 }
 
 
-const renderPostInPlace = (postData) => {
+function renderPostInPlace(postData) {
     const post = createPost(postData);
     const postsBlock = document.querySelector('.posts');
     postsBlock.appendChild(post);

@@ -1,9 +1,3 @@
-const addPost = (post) => {
-    let storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
-    storedPosts.push(post);
-    localStorage.setItem('posts', JSON.stringify(storedPosts));
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const storedPosts = JSON.parse(localStorage.getItem('posts'));
 
@@ -48,18 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
         postData['lastChange'] = new Date().toUTCString();
         addPost(postData);
         form.reset();
+        const code = document.querySelector("#highlighting-content");
+        code.innerHTML = '';
         renderPostInPlace(postData);
-    });
-
-    form.addEventListener('change', (e) => {
-        const target = e.target;
-        const value = target.value;
-
-        if (!value) {
-            target.classList.add('error');
-            return;
-        }
-
-        target.classList.remove('error');
     });
 });
