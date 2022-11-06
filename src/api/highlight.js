@@ -57,13 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const syncScroll = (element, textarea) => {
+    element.scrollTop = textarea.scrollTop;
+    element.scrollLeft = textarea.scrollLeft;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById("new-post-form");
-    const textarea = document.querySelector("#editing");
-    const syncScroll = (element, textarea) => {
-        element.scrollTop = textarea.scrollTop;
-        element.scrollLeft = textarea.scrollLeft;
+    if (!form) {
+        return;
     }
 
     form.addEventListener('input', (e) => {
@@ -95,12 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         code.classList.add(postLanguage);
         hljs.highlightElement(code);
     });
-
-    textarea.addEventListener('scroll', (e) => {
-        const target = e.target;
-        let code = target.parentElement.querySelector('#highlighting-content');
-        syncScroll(code, target);
-    });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -126,4 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
             hljs.highlightElement(code);
         }
     })
+
+    textarea.addEventListener('scroll', (e) => {
+        const target = e.target;
+        let code = target.parentElement.querySelector('#highlighting-content');
+        syncScroll(code, target);
+    });
 });
