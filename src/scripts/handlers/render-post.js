@@ -64,9 +64,11 @@ function createPostTable(content) {
 function createTableLine(line, index) {
     const singleLine = document.createElement('tr');
     singleLine.classList.add('code-line');
+    const fmtLine = line.replace(/ /g, '&nbsp;')
+        .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;')
     singleLine.innerHTML = `
             <td class="code-line-number">${index + 1}</td>
-            <td class="code-line-content">${line.replace(/ /g, '&nbsp;')}</td>
+            <td class="code-line-content">${fmtLine}</td>
         `;
     return singleLine;
 }
