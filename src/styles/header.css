@@ -54,7 +54,7 @@
 
 @media screen and (max-width: 768px) {
     .header-input {
-        width: 8rem;
+        display: none;
     }
 }
 
