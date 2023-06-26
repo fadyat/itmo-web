@@ -1,0 +1,129 @@
+* {
+    /*outline: 1px solid red;*/
+}
+
+.body {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 30px;
+}
+
+.footer, .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header, .footer {
+    flex-direction: row;
+    height: 6%;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+.footer {
+    justify-content: space-around;
+}
+
+.header-item, .footer-item {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    height: 30px;
+    align-items: center;
+}
+
+.header-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.clickable {
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.header-user-photo {
+    width: 70%;
+}
+
+.header * {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.header-user-photo-img {
+    border-radius: 100%;
+    display: flex;
+    width: 40px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    max-height: 40px;
+}
+
+.server-load-time, .client-load-time {
+    font-size: 11px;
+}
+
+.header-sign-out, .header-sign-in, .header-sign-up {
+    width: 50%;
+}
+
+.header-search {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-search a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-search .new-post-img {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 1100px) {
+    .header {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .header {
+        font-size: 13px;
+    }
+
+    .new-post {
+        display: none;
+    }
+
+    .header-user-photo-img {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-search {
+        display: none;
+    }
+
+    .header-user-photo {
+        width: 50%;
+    }
+}
+
+.req {
+    font-size: 15px;
+    margin-left: 1px;
+    color: red;
+}

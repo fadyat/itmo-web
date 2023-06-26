@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>site.info}}
+  {{>default.styles}}
+  {{>user.styles}}
+  {{>post.styles}}
+</head>
+
+<body class="body">
+{{>header}}
+
+
+{{# if user }}
+  <div class="user-profile">
+    <div class="user-personal-info">
+      <div class="user-profile-photo">
+        <img src={{this.user.photo}} alt="user-photo" class="user-profile-photo-img" />
+      </div>
+      <div class="user-profile-name">{{this.user.name}}</div>
+      <div class="user-profile-email">{{this.user.email}}</div>
+      <div class="user-profile-subs">
+        <div class="user-profile-followers">
+          <a href="{{querify currentPage=this.currentPage omitAll=true}}?tab=followers">
+            {{this.user.followersCount}} followers
+          </a>
+        </div>
+        <div class="user-profile-following">
+          <a href="{{querify currentPage=this.currentPage omitAll=true}}?tab=following">
+            {{this.user.followingCount}} following
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="user-profile-posts">
+      <div class="user-profile-posts-info">
+        <div class="user-profile-posts-count">
+          <a href="{{querify currentPage=this.currentPage omitAll=true}}?tab=posts">
+            All posts {{this.user.postsCount}}
+          </a>
+        </div>
+        <div class="user-profile-posts-filter">Filters...</div>
+      </div>
+      {{# if this.posts}}
+        {{>posts.list this.posts.data currentPage=this.currentPage}}
+        {{>pagination this.posts.meta currentPage=this.currentPage}}
+      {{/if}}
+
+      {{# if this.followers }}
+        <div class="user-profile-card-list">
+          {{# each this.followers.data}}
+            {{>user.info me=../me}}
+          {{/each}}
+        </div>
+        {{>pagination this.followers.meta currentPage=this.currentPage}}
+      {{/if}}
+
+      {{# if this.following }}
+        <div class="user-profile-card-list">
+          {{# each this.following.data }}
+            {{>user.info me=../me}}
+          {{/each}}
+        </div>
+        {{>pagination this.following.meta currentPage=this.currentPage}}
+      {{/if}}
+
+    </div>
+  </div>
+{{/if}}
+
+{{#if error}}
+  {{>error this.error}}
+{{/if}}
+
+{{>footer}}
+</body>
+</html>

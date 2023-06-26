@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>site.info}}
+  {{>default.styles}}
+  {{>user.styles}}
+</head>
+
+<body class="body">
+{{>header}}
+
+<div class="user-profile-card-list">
+  {{#each this.users.data}}
+    {{>user.info me=../me}}
+  {{/each}}
+</div>
+
+{{>pagination this.users.meta currentPage=this.currentPage}}
+
+{{>footer}}
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>site.info}}
+  {{>default.styles}}
+  {{>user.styles}}
+  {{>post.styles}}
+
+  <script src="/scripts/delete-post.js"></script>
+</head>
+
+
+<body class="body">
+{{>header}}
+
+{{#if error}}
+  {{>error this.error}}
+{{else}}
+  {{# ifeq me.id this.post.author.id}}
+    <div class="post-options">
+      <a href="{{querify currentPage=this.currentPage omitAll=true}}/edit" class="href post-option">
+        <div class="edit-post-option">Edit</div>
+      </a>
+      <div class="post-option delete-post-option"
+           id={{this.post.id}}
+           action={{deletePostEndpoint}}
+      >
+        Delete
+      </div>
+    </div>
+  {{/ifeq}}
+
+  <div class="single-post">
+    {{>post this.post currentPage=currentPage singlePostPage=true}}
+  </div>
+
+  <div class="comments">
+    {{#each this.comments.data}}
+      {{>comment comment=this}}
+    {{/each}}
+  </div>
+
+  {{>pagination this.comments.meta currentPage=this.currentPage}}
+
+  {{>comment.new createCommentEndpoint=this.createCommentEndpoint me=this.me backendGatewayURI=this.backendGatewayURI}}
+
+{{/if}}
+
+{{>footer}}
+</body>
+</html>

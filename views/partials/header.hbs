@@ -1,0 +1,47 @@
+<header class="header">
+  <div class="header-item header-search">
+    <div class="header-item new-post">
+      <a href="/">
+        <img src="/images/plus.png" alt="new post" class="new-post-img" />
+      </a>
+    </div>
+    <div class="header-item">
+      <a href="/discover">Discover</a>
+    </div>
+    <div class="header-item">
+      <a href="/newbie">Newbie</a>
+    </div>
+  </div>
+
+  {{#if me}}
+    <div class="header-item header-user-photo">
+      <a href="/{{me.name}}">
+        <img src="{{me.photo}}" alt="User photo" class="header-user-photo-img" />
+      </a>
+    </div>
+    <div class="header-item header-sign-out clickable"
+         onclick="signout()"
+    >
+      Sign out
+    </div>
+  {{else}}
+    <div class="header-item header-sign-in clickable"
+    >
+      <a href="/auth/signin">Sign in</a>
+    </div>
+    <div class="header-item header-sign-up clickable"
+    >
+      <a href="/auth/signup">Sign up</a>
+    </div>
+  {{/if}}
+</header>
+
+<script>
+  async function signout() {
+    await fetch("/api/v1/auth/signout", {
+      method: "post"
+    });
+
+    window.location.href = "/";
+  }
+</script>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    window.addEventListener("DOMContentLoaded", async () => {
+      const form = document.getElementById("new-post-form");
+      const checkbox = document.getElementById("isPublic");
+      const updatePostButton = document.querySelector(".update-post-option");
+      checkbox.value = checkbox.checked;
+
+      function isBoolean(value) {
+        return value === "true" || value === "false";
+      }
+
+      checkbox.addEventListener("change", async () => {
+        checkbox.value = checkbox.checked;
+      });
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        {{#if me}}
+          const postData = {
+            authorId: {{me.id}},
+          };
+
+          Array.from(form.elements)
+            .filter((i) => i.name)
+            .forEach((el) => {
+              let value = el.value;
+              if (isBoolean(el.value)) {
+                value = value === "true";
+              }
+
+              postData[el.name] = value;
+            });
+
+          const action = form.getAttribute("action");
+          const postId = updatePostButton.getAttribute("id");
+          const updatePostEndpoint = action.replace(":postId", postId);
+
+          const response = await fetch(updatePostEndpoint, {
+            method: form.getAttribute("method"),
+            body: JSON.stringify(postData),
+            headers: { "Content-Type": "application/json" }
+          });
+
+          if (response.status >= 200 && response.status < 300) {
+            window.location = "/{{me.name}}";
+          }
+        {{/if}}
+      });
+    });
+
+  </script>
+  {{>site.info}}
+  {{>default.styles}}
+  {{>user.styles}}
+  {{>post.styles}}
+</head>
+
+
+<body class="body">
+{{>header}}
+
+{{#if error}}
+  {{>error this.error}}
+{{else}}
+  {{#ifeq me.id this.post.author.id }}
+    <div class="post-new">
+      <form class="post-new-form"
+            method="put"
+            id="new-post-form"
+            action="{{updatePostEndpoint}}"
+      >
+        <div class="post-new-form-header">
+          <label for="name" class="post-new-form-name-label"></label>
+          <input class="post-new-form-name"
+                 id="name"
+                 autocomplete="off"
+                 name="name"
+                 placeholder="aboba.py"
+                 value={{post.name}}
+          />
+          <div class="post-new-form-is-public-div">
+            <input type="checkbox"
+                   id="isPublic"
+                   class="post-new-form-is-public"
+                   autocomplete="off"
+                   name="isPublic"
+                   value="{{post.isPublic}}"
+                   {{#if post.isPublic}}checked{{/if}}
+            >
+            <label for="isPublic" class="post-new-form-is-public-label">public</label>
+          </div>
+        </div>
+        <label for="body" class="post-new-form-body-label"></label>
+        <textarea class="post-new-form-body"
+                  id="body"
+                  autocomplete="off"
+                  name="body"
+                  placeholder="import aboba
+
+
+def aboba_cringe():
+    return aboba('bebra')
+">{{post.body}}</textarea>
+        <button class="post-new-create-button update-post-option"
+                type="submit"
+                id="{{post.id}}"
+        >update
+        </button>
+      </form>
+    </div>
+  {{/ifeq}}
+{{/if}}
+
+{{>footer}}
+</body>
+</html>

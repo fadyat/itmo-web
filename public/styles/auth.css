@@ -1,0 +1,37 @@
+.sign-in-form, .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.sign-in-form-item, .sign-up-form-item {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 25%;
+}
+
+.sign-in-form-item label, .sign-up-form-item label {
+    padding: 3px;
+    font-size: 17px;
+}
+
+.sign-in-form-item input, .sign-up-form-item input {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.sign-in-form-item button, .sign-up-form-item button {
+    font-size: 15px;
+}
+
+.button-div {
+    padding-top: 10px;
+}
+
+* {
+    /*outline: 1px red solid;*/
+}

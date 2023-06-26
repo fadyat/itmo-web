@@ -1,0 +1,109 @@
+{{# if me }}
+  <div class="comment-new">
+    <form class="comment-new-form"
+          method="post"
+          id="new-comment-form"
+          action="{{createCommentEndpoint}}"
+    >
+      <label for="body" class="comment-new-form-body-label"></label>
+      <textarea class="post-new-form-body"
+                id="body"
+                autocomplete="off"
+                name="body"
+                placeholder="Hey, I'm a comment"
+                style="margin: 0"
+      ></textarea>
+      <button class="post-new-create-button update-post-option"
+              type="submit"
+              id="new-comment-submit-button">
+        create
+      </button>
+    </form>
+  </div>
+{{/if}}
+
+<script>
+  const socket = io("{{backendGatewayURI}}", { type: ["websockets"] });
+
+  socket.on("connect", () => {
+    console.log("Connected to socket.io server");
+  });
+
+  window.addEventListener("DOMContentLoaded", async () => {
+    const newCommentForm = document.getElementById("new-comment-form");
+
+    newCommentForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const commentData = {
+      authorId: {{#if me}} {{me.id}} {{else}} null {{/if}},
+        postId: parseInt(window.location.pathname.split("/")[2]),
+        body: document.getElementById("body").value
+      };
+
+      // await fetch(newCommentForm.action, {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(commentData)
+      // })
+      //   .then((response) => {
+      //     if (response.status >= 200 && response.status < 300) {
+      //       window.location.reload();
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
+
+      socket.emit("comment", commentData);
+    });
+  });
+
+  socket.on("comment", (success) => {
+    createNotification();
+  });
+
+  function createNotification() {
+    toastr.options.closeButton = true;
+    toastr.options.positionClass = "toast-absolute toast-bottom-right";
+    toastr.options.timeOut = 5000;
+    toastr.success("Checkout the new comment!");
+  }
+
+</script>
+
+
+<style>
+  .comment-new {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    padding-top: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comment-new-form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    min-width: 70%;
+  }
+
+  #toast-container {
+    font-size: 14px;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+
+  #toast-container > div {
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    color: white;
+  }
+
+
+</style>

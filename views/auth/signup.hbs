@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>site.info}}
+  {{>default.styles}}
+  {{>user.styles}}
+  <link href="/styles/auth.css" rel="stylesheet" />
+  <script src="/scripts/auth/signup.js"></script>
+</head>
+
+<body class="body">
+{{>header}}
+
+<form class="sign-up-form"
+      action="{{signUpEndpoint}}"
+>
+  <div class="sign-up-form-item">
+    <label for="name">Name<span class="req">*</span></label>
+    <input name="name" id="name" required autocomplete="off" />
+  </div>
+  <div class="sign-up-form-item">
+    <label for="photo">Photo</label>
+    <input name="photo" id="photo" autocomplete="off" />
+  </div>
+  <div class="sign-up-form-item">
+    <label for="email">Email<span class="req">*</span></label>
+    <input type="email" name="email" id="email" required autocomplete="off" />
+  </div>
+  <div class="sign-up-form-item">
+    <label for="password">Password<span class="req">*</span></label>
+    <input type="password" name="password" id="password" required autocomplete="off" />
+  </div>
+  <div class="sign-up-form-item button-div">
+    <button type="submit">Sign up</button>
+  </div>
+</form>
+
+{{>footer}}
+</body>
+</html>

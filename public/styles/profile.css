@@ -1,0 +1,179 @@
+.user-profile {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+}
+
+.user-personal-info {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    margin-top: 40px;
+    padding-left: 70px;
+}
+
+.user-personal-info * {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.user-profile-photo * {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+.user-profile-posts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.user-profile-posts-info {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    align-self: center;
+    margin-top: 60px;
+}
+
+.user-profile-posts-filter {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user-profile-posts-count {
+    display: flex;
+    width: 100%;
+}
+
+.user-profile-posts-count a {
+    color: black;
+    text-decoration: none;
+}
+
+.user-profile-photo-img {
+    border-radius: 100%;
+}
+
+.user-profile-card-list {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.user-profile-card {
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+    margin-bottom: 15px;
+    align-self: center;
+    min-width: 50%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.user-profile-card-left-side {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    padding: 5px 0 5px 20px;
+}
+
+.user-profile-card-right-side {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.user-profile-card-photo {
+    width: 40px;
+}
+
+.user-profile-card-photo-img {
+    border-radius: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: red;
+    max-height: 40px;
+}
+
+.user-profile-card-user-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 100px;
+    padding-right: 10px;
+}
+
+.user-profile-card-username {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile-href {
+    color: black;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.user-profile-follow-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px;
+    width: 100%;
+}
+
+.user-profile-follow {
+    padding: 7px;
+}
+
+.user-profile-subs {
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.user-profile-subs a {
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 925px) {
+    .user-personal-info {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .user-profile-followers, .user-profile-following {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .user-profile-followers, .user-profile-following {
+        font-size: 9px;
+    }
+}

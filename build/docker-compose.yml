@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  pg:
+    image: postgres:14.5-alpine
+    container_name: pg
+    restart: on-failure
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+

@@ -1,0 +1,72 @@
+<script>
+  async function follow(button) {
+    button.disabled = true;
+    await fetch(`/api/v1/users/${button.value}/follow`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      credentials: "include",
+      mode: "same-origin"
+    });
+
+    setTimeout(() => {
+      button.disabled = false;
+    }, 500);
+    window.location.reload();
+  }
+
+  async function unfollow(button) {
+    button.disabled = true;
+    await fetch(`/api/v1/users/${button.value}/unfollow`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      credentials: "include",
+      mode: "same-origin"
+    });
+
+    setTimeout(() => {
+      button.disabled = false;
+    }, 500);
+    window.location.reload();
+  }
+</script>
+
+<div class="user-profile-card">
+  <div class="user-profile-card-left-side">
+    <div class="user-profile-card-photo">
+      <img class="user-profile-card-photo-img" src={{photo}} alt="user-profile-image">
+    </div>
+    <a href='{{name}}' class="user-profile-href">
+      <div class="user-profile-card-username">{{name}}</div>
+    </a>
+  </div>
+  <div class="user-profile-card-right-side">
+    <div class="user-profile-follow-button">
+      {{#if follows}}
+        <button class="user-profile-follow clickable"
+                id="unfollow-button"
+                value="{{this.id}}"
+                onclick="unfollow(this)"
+        >
+          Unfollow
+        </button>
+      {{else}}
+        {{#ifeq me.id this.id}}
+          <button class="user-profile-follow clickable">It's you</button>
+        {{else}}
+          <button class="user-profile-follow clickable"
+                  id="follow-button"
+                  value="{{this.id}}"
+                  onclick="follow(this)"
+                  {{#unless me.id}}disabled{{/unless}}
+          >
+            Follow
+          </button>
+        {{/ifeq}}
+      {{/if}}
+    </div>
+  </div>
+</div>

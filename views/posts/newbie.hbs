@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  {{>site.info}}
+  {{>default.styles}}
+  {{>post.styles}}
+</head>
+
+
+<body class="body">
+{{>header}}
+
+{{>posts.list this.posts.data newbiePage=true}}
+
+{{>pagination this.posts.meta currentPage=this.currentPage}}
+
+{{>footer}}
+</body>
+</html>

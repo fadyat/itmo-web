@@ -1,0 +1,39 @@
+{{# if this.name}}
+  <div class="post">
+    <div class="post-header">
+      <div class="post-left-side-info">
+        <a href="/{{this.author.name}}" class="href post-author">
+          {{this.author.name}}
+        </a>
+        <div class="post-author-name-separator">/</div>
+        <a href="
+        {{#if singlePostPage}}
+          {{ querify currentPage=this.currentPage omitAll=true}}
+        {{else if newbiePage}}
+          {{this.author.name}}/{{this.id}}
+        {{else}}
+          {{ querify currentPage=this.currentPage omitAll=true}}/{{this.id}}
+        {{/if}}
+" class="href post-name">
+          {{this.name}}
+        </a>
+      </div>
+      <div class="post-right-side-info">
+        <div class="post-privacy">
+          {{#unless this.isPublic }}
+            secret
+          {{/unless}}
+        </div>
+        <div class="post-updated-at">{{dateFormat this.updatedAt "DD.MM.YYYY"}}</div>
+      </div>
+    </div>
+    <div class="post-body">
+      {{#each this.body}}
+        <div class="post-row">
+          <div class="post-row-number">{{@index}}</div>
+          <div class="post-row-content">{{this}}</div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+{{/if}}

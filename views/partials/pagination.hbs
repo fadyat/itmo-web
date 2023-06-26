@@ -1,0 +1,37 @@
+<div class="pagination">
+  <a
+    {{# if hasPrev }}
+    href="{{querify currentPage=this.currentPage page=(dec this.page) }}"
+    {{/if}}
+  >
+    Prev
+  </a>
+
+  <a
+    {{# if hasNext }}
+    href="{{querify currentPage=this.currentPage page=(inc this.page) }}"
+    {{/if}}
+  >
+    Next
+  </a>
+</div>
+
+<style>
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 11px;
+  }
+
+  .pagination a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .pagination a:not([href]) {
+    color: grey;
+  }
+
+</style>

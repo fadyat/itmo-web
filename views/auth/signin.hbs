@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{>site.info}}
+  {{>default.styles}}
+  {{>user.styles}}
+  <link href="/styles/auth.css" rel="stylesheet" />
+  <script src="/scripts/auth/signin.js"></script>
+</head>
+
+<body class="body">
+{{>header}}
+
+<form class="sign-in-form"
+      action="{{signInEndpoint}}"
+>
+  <div class="sign-in-form-item">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" autocomplete="off" required />
+  </div>
+  <div class="sign-in-form-item">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" autocomplete="off" required />
+  </div>
+  <div class="sign-in-form-item button-div">
+    <button type="submit">Sign in</button>
+  </div>
+</form>
+
+{{>footer}}
+</body>
+</html>

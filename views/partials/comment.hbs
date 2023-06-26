@@ -1,0 +1,63 @@
+{{# if this.comment }}
+  <div class="comment">
+    <div class="comment-left-side-info">
+      <div class="comment-author">
+        <a href="/{{this.comment.author.name}}" class="href">
+          {{this.comment.author.name}}
+        </a>
+      </div>
+      <div class="comment-created-at">
+        {{dateFormat this.comment.createdAt "DD.MM.YYYY"}}
+      </div>
+    </div>
+    <div class="comment-right-side-info">
+      <textarea class="post-new-form-body"
+                id="published-post"
+                style="margin: 0; min-height: 0; height: auto;"
+                disabled
+      >{{this.comment.body}}</textarea>
+      <label for="published-post" class="comment-new-form-body-label"></label>
+    </div>
+  </div>
+{{/if }}
+
+<style>
+  .comment {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    min-width: 70%;
+  }
+
+  .comment-left-side-info {
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+    padding-top: 7px;
+  }
+
+  .comment-created-at {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-right: 5px;
+    justify-content: flex-end;
+  }
+
+  .comment-author {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .comment-right-side-info {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+</style>

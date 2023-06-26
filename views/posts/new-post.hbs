@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  {{>site.info}}
+  {{>default.styles}}
+  {{>post.styles}}
+  <script>
+    window.addEventListener("DOMContentLoaded", async () => {
+      const form = document.getElementById("new-post-form");
+      const checkbox = document.getElementById("isPublic");
+      checkbox.value = checkbox.checked;
+
+      function isBoolean(value) {
+        return value === "true" || value === "false";
+      }
+
+      checkbox.addEventListener("change", async () => {
+        checkbox.value = checkbox.checked;
+      });
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        {{#if me}}
+          const postData = {
+            authorId: {{me.id}},
+          };
+
+          Array.from(form.elements)
+            .filter((i) => i.name)
+            .forEach((el) => {
+              let value = el.value;
+              if (isBoolean(el.value)) {
+                value = value === "true";
+              }
+
+              postData[el.name] = value;
+            });
+
+          const response = await fetch(form.getAttribute("action"), {
+            method: form.getAttribute("method"),
+            body: JSON.stringify(postData),
+            headers: { "Content-Type": "application/json" }
+          });
+
+          if (response.status >= 200 && response.status < 300) {
+            window.location = "/{{me.name}}";
+          }
+        {{else}}
+          alert("please, login first");
+        {{/if}}
+      });
+    });
+  </script>
+</head>
+
+
+<body class="body">
+{{>header}}
+
+<div class="post-new">
+  <form class="post-new-form"
+        method="post"
+        id="new-post-form"
+        action="{{fetchEndpoint}}"
+  >
+    <div class="post-new-form-header">
+      <label for="name" class="post-new-form-name-label"></label>
+      <input class="post-new-form-name"
+             id="name"
+             autocomplete="off"
+             name="name"
+             placeholder="aboba.py"
+      />
+      <div class="post-new-form-is-public-div">
+        <input type="checkbox"
+               id="isPublic"
+               class="post-new-form-is-public"
+               autocomplete="off"
+               name="isPublic"
+               checked
+        >
+        <label for="isPublic" class="post-new-form-is-public-label">public</label>
+      </div>
+    </div>
+    <label for="body" class="post-new-form-body-label"></label>
+    <textarea class="post-new-form-body"
+              id="body"
+              autocomplete="off"
+              name="body"
+              placeholder="import aboba
+
+
+def aboba_cringe():
+    return aboba('bebra')
+"></textarea>
+    <button class="post-new-create-button update-post-option" type="submit" id="new-post-submit-button">create
+    </button>
+  </form>
+</div>
+
+{{>footer}}
+</body>
+</html>
